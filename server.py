@@ -9,7 +9,7 @@ class Patients(Resource):
         result = {"hello" : "world", "bye": "bruh"}
         return jsonify(result)
 
-api.add_resource(Patients, '/patients')
+api.add_resource(Patients, '/patients') #Route 1
 
 if __name__ == '__main__':
      app.run(port='5002')
