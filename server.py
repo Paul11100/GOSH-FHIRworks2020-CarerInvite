@@ -9,9 +9,12 @@ class Patients(Resource):
     def get(self):
         main = Main()
         limit = int(request.args.get("limit"))
-        print(limit)
-        result = main.print_patients_in_range(limit, 55, 65, "Paul", "UCL-FHIR-Hack", "appdownload.com")
-        # result = {"hello" : "world", "bye": "bruh"}
+        lower = int(request.args.get("lower"))
+        upper = int(request.args.get("upper"))
+        sender_name = request.args.get("name")
+        sender_ref = request.args.get("ref")
+        app_url = request.args.get("url")
+        result = main.print_patients_in_range(limit, lower, upper, sender_name, sender_ref, app_url)
         return jsonify(result)
 
 api.add_resource(Patients, '/patients') #Route 1
