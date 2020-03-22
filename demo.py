@@ -23,6 +23,5 @@ data = r.json()
 # Print out every object
 for patient in data:
     print(patient["phone"])
-    print(patient["msg"])
-    print()
+    print(patient["msg"] + "\n")
 
