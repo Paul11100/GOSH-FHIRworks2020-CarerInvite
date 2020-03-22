@@ -63,6 +63,8 @@ def str_to_patients(input: str) -> List[Patient]:
     patients: List[Patient] = []
     for i in input:
         for p in i['entry']:
+            if not 'telecom' in json.loads(json.dumps(p['resource'])):
+                continue
             patients.append(str_to_patient(json.dumps(p['resource'])))
     return patients
 
