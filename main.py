@@ -16,11 +16,15 @@ class Main:
             name = patient.full_name()
             age = patient.age()
             if age >= lower and age < upper:
+                telecoms = patient.telecoms
+                phone = telecoms[len(telecoms) - 1].number
+                print(phone)
                 msg = "Hi " + name + ",\n" + "Are you a carer? If so, we've built an app just for you! You can download our app for carers here: " + app_url + "\nUse this reference code to set up your app: " + sender_ref + "\nTake Care,\n" + sender_name
                 print(msg)
                 print(id)
                 print(name)
                 print(age)
+                print()
                 i += 1
 
 main = Main()
