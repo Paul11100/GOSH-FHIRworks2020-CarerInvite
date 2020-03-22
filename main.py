@@ -33,8 +33,8 @@ class Main:
                 patients_list.append(dict)
                 i += 1
 
-main = Main()
-list = main.print_patients_in_range(3, 55, 65, "Paul", "UCL-FHIR-Hack", "appdownload.com")
+# main = Main()
+# list = main.print_patients_in_range(3, 55, 65, "Paul", "UCL-FHIR-Hack", "appdownload.com")
 
 # patient = fhir.get_patient('8f789d0b-3145-4cf2-8504-13159edaa747')
 # name = patient.full_name()

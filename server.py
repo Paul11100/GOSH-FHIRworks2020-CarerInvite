@@ -22,3 +22,4 @@ api.add_resource(Patients, '/patients') #Route 1
 if __name__ == '__main__':
      app.run(port='5002')
 
+# Sample Request: http://127.0.0.1:5002/patients?limit=5&lower=55&upper=65&name=paul&ref=UCL-FHIR-Hack&url=appdownload.com
